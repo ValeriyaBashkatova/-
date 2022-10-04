@@ -1,0 +1,7 @@
+k=0
+strng = str(input('Введите строку:'))
+while (":" in strng):
+    strng = strng.replace(':', '%', 1)
+    k+=1
+print("Полученная строка:",strng)
+print("Количество замен:", k)
