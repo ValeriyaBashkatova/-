@@ -1,0 +1,25 @@
+n = int(input('Введите кол-во строк и столбцов квадратной матрицы:\n'))
+with open ('3.pages','r') as f:
+ d = []
+ for s in f:
+ d.append(int(s))
+ matrix = []
+ for i in range(n):
+ matrix.append([])
+ for j in range(n):
+ matrix[i].append(d[i])
+ summa = sum(matrix[0])
+ for i in range(len(matrix)):
+ a = 0
+ for j in range(len(matrix)):
+ a += matrix[j][i]
+ if a != summa or sum(matrix[i]) != summa:
+ m = 1
+ else:
+ m = 0
+with open ('2file.pages','a') as file:
+ file.write(str(matrix))
+ if m ==1:
+ file.write('Это не магический квадрат')
+ else:
+ file.write('Это магический квадрат')
