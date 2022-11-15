@@ -1,0 +1,13 @@
+def proverka(matrix):
+ summa = sum(matrix[0])
+ for i in range(len(matrix)):
+ a = 0
+ for j in range(len(matrix)):
+ a += matrix[j][i]
+ if a != summa or sum(matrix[i]) != summa:
+ return "Это не магический квадрат"
+ return "Это магический квадрат"
+mat = [[1, 2, 2],
+ [2, 1, 2],
+ [2, 2, 1]]
+print(proverka(mat)))
