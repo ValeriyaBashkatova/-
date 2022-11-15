@@ -1,0 +1,11 @@
+minE=100000
+n=int(input("Vvedite dlinnu massiva\n"))
+x=[]
+for i in range(n):
+ print("Vvedite", i , "element:")
+ x.append(int(input()))
+for i in range(0, len(x)-1):
+ if (x[i]) < minE:
+ minE= min(minE, x[i])
+ index=i
+print("Min element=", minE, "index el=", index)
