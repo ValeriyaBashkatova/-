@@ -1,0 +1,8 @@
+def s(c,h):
+ s = c*h
+ return s
+for i in range (1,4):
+ print('Введите стороны', i, "-го прямоугольника")
+ a = int(input())
+ b = int(input())
+ print("Площадь",i,"-го прямоугольника=",s(a,b))
